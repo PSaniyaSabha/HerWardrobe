@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HerWardrobe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    ">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo-container">
+            <a href="#" class="logo">HerWardrobe</a>
+            <span class="tagline">by Saniya Sabha</span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="cart">
+            <button>
+                <i class="fa-solid fa-bag-shopping"></i> 
+                <span id="cart-count" class="cart-badge">0</span>
+            </button>
+        </div>
+        
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <section class="hero cinematic-hero">
+        <div class="cinematic-overlay"></div>
+        <div class="hero-content cinematic-content">
+            <h1 class="typing-text">New Modest Collection</h1>
+            <p class="fade-in">Elegant • Comfortable • Trendy</p>
+            <a href="#new-arrivals" class="cinematic-btn fade-in">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="categories" id="shop"> 
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+
+            <div class="category-card">
+                <img src="dress.png" alt="Dresses">
+                <h3>Dresses</h3>
+            </div>
+            <div class="category-card">
+                <img src="images/abayas.png" alt="Abayas">
+                <h3>Abayas</h3>
+            </div>
+            <div class="category-card">
+                <img src="hijbas.png" alt="Hijabs">
+                <h3>Hijabs</h3>
+            </div>
+            <div class="category-card">
+                <img src="coord.png" alt="Co-ords">
+                <h3>Co-ords</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="new-arrivals" id="new-arrivals">
+        <h2>New Arrivals</h2>
+        <div class="products-grid">
+
+            <div class="product-card">
+                <img src="ethnic.png" alt="New Dress">
+                <h3>Ethnic wear</h3>
+                <p class="price">499/-</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="newabaya.png" alt="Abaya">
+                <h3>Partywear Abayas</h3>
+                <p class="price">1200/-</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="suits.png" alt="kurtis">
+                <h3>Kurtis & Suits</h3>
+                <p class="price">699/-</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="newcord.png" alt="Co-ords">
+                <h3>Trendy Co-ords</h3>
+                <p class="price">799/-</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p><strong>Name:</strong> Saniya Sabha</p>
+        <p><strong>Mobile:</strong> +91-9880354269</p>
+        <p><strong>Email:</strong> saniyasabha@gmail.com</p>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About HerWardrobe</h2>
+        <p>Welcome to HerWardrobe, where modesty meets elegance. Founded by Saniya Sabha, HerWardrobe is dedicated to offering stylish, comfortable, and trendy modest wear for all women.</p>
+        <p>We believe in empowering women to express themselves through fashion without compromising on modesty.</p>
+        <p>Explore our carefully curated collection of Abayas, Dresses, Hijabs, and Co-ords tailored to make you feel confident and beautiful.</p>
+        <p>We are passionate about delivering quality and affordability while staying true to modest fashion. Thank you for being a part of our journey!</p>
+    </section>
+
+    <section class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get updates on new arrivals, special offers, and more!</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    
+    <footer>
+        © 2025 HerWardrobe | Designed by Saniya Sabha
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        const buttons = document.querySelectorAll(".product-card button");
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert("Added to cart!");
+            });
+        });
+    </script>
+</body>
+</html>
